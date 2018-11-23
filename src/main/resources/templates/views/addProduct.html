@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot: javabeginnerstutorial.com</title>
+
+</head>
+<body>
+<h1>New Product</h1>
+<form action="#" th:action="@{/addProduct}" th:object="${product}" method="post">
+<p>Nom du produit : <input type="text" th:field="*{name}"/></p>
+<p>Description du produit : <input type="number" th:field="*{description}"/></p>
+<p>Prix : <input type="number" th:field="*{price}"/></p>
+<p>Date création : <input type="date" th:field="*{createdOn}"/></p>
+<p><input type="submit" value="Create Product"/> <input type="reset" value="Reset all fields"/></p>
+</form>
+</body>
+</html>

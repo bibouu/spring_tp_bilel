@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Seller</title>
+ 
+<style>
+th, td {
+    padding: 5px;
+}
+</style>
+ 
+</head>
+ 
+<body>
+    <!-- Include _menu.html -->
+   <th:block th:include="/index"></th:block> 
+ 
+    <h2>All Seller</h2>
+ 
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Adresse</th>
+            <th>Code Postal</th>
+             <th>Ville</th>
+        </tr>
+        <tr th:each="seller : ${list_all_seller}">
+            <td th:utext="${seller.id}">..</td>
+            <td th:utext="${seller.name}">..</td>
+            <td th:utext="${seller.adress}">..</td>
+            <td th:utext="${seller.zipCode}">..</td>
+            <td th:utext="${seller.city}">..</td>
+        </tr>
+ 
+    </table>
+</body>
+</html>

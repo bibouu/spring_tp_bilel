@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bank</title>
+ 
+<style>
+th, td {
+    padding: 5px;
+}
+</style>
+ 
+</head>
+ 
+<body>
+    <!-- Include _menu.html -->
+   <th:block th:include="/index"></th:block> 
+ 
+    <h2>All Product</h2>
+ 
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+             <th>Created On </th>
+        </tr>
+        <tr th:each="product : ${list_all_product}">
+            <td th:utext="${product.id}">..</td>
+            <td th:utext="${product.name}">..</td>
+            <td th:utext="${product.description}">..</td>
+            <td th:utext="${product.price}">..</td>
+            <td th:utext="${product.createdOn}">..</td>
+        </tr>
+ 
+    </table>
+</body>
+</html>
